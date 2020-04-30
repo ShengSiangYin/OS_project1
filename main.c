@@ -66,8 +66,8 @@ int main(int argc, char const *argv[])
 			if (check_finish_process(now, processes, schedule))
 			{
 				now = get_next(0, now, N, processes, schedule);
-				if (now == -1)
-					break;
+				//if (now == -1)
+				//	break;
 				wake_process(now, processes, schedule);
 			}
 
@@ -120,8 +120,8 @@ int main(int argc, char const *argv[])
 				if (check_finish_process(now, processes, schedule))
 				{
 					now = get_next(1, now, N, processes, schedule);
-					if (now == -1)
-						break;
+					//if (now == -1)
+					//	break;
 					wake_process(now, processes, schedule);
 				}
 				else
@@ -143,8 +143,8 @@ int main(int argc, char const *argv[])
 				{
 					clockstart = timestamp;
 					now = get_next(1, now, N, processes, schedule);
-					if (now == -1)
-						break;
+					//if (now == -1)
+					//	break;
 					wake_process(now, processes, schedule);
 				}
 			}
@@ -190,8 +190,8 @@ int main(int argc, char const *argv[])
 			if (check_finish_process(now, processes, schedule))
 			{
 				now = get_next(2, now, N, processes, schedule);
-				if (now == -1)
-					break;
+				//if (now == -1)
+				//	break;
 				wake_process(now, processes, schedule);
 			}
 
@@ -235,16 +235,16 @@ int main(int argc, char const *argv[])
 			if (check_finish_process(now, processes, schedule))
 			{
 				now = get_next(3, now, N, processes, schedule);
-				if (now == -1)
-					break;
+				//if (now == -1)
+				//	break;
 				wake_process(now, processes, schedule);
 			}
 			else if (now != -1)
 			{
 				switch_process(now, processes, schedule);
 				now = get_next(3, now, N, processes, schedule);
-				if (now == -1)
-					break;
+				//if (now == -1)
+				//	break;
 				wake_process(now, processes, schedule);
 			}
 			
